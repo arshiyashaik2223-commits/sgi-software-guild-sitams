@@ -1,0 +1,564 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the departments of SGI Software Guild at SITAMS.">
+    <title>Departments | SGI Software Guild</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Logo styling */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-logo {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            background: white;
+            border-radius: 8px;
+            padding: 3px;
+            flex-shrink: 0;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .brand-text strong {
+            color: white;
+            font-size: 18px;
+        }
+
+        .brand-text small {
+            display: block;
+            color: #b8c8df;
+            font-size: 10px;
+            letter-spacing: 1.2px;
+        }
+
+        /* Department details */
+        .department-detail {
+            margin: 35px 0;
+            padding: 32px;
+            background: #ffffff;
+            border-left: 5px solid #f4c542;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(7, 27, 58, 0.08);
+            scroll-margin-top: 25px;
+        }
+
+        .department-detail h2 {
+            color: #071b3a;
+            font-size: 28px;
+            margin-bottom: 14px;
+        }
+
+        .department-detail h3 {
+            color: #123e70;
+            margin-top: 22px;
+            margin-bottom: 8px;
+        }
+
+        .department-detail p,
+        .department-detail li {
+            color: #46546a;
+            line-height: 1.8;
+        }
+
+        .department-detail ul {
+            padding-left: 24px;
+        }
+
+        .department-detail li {
+            margin-bottom: 8px;
+        }
+
+        .department-detail .text-link {
+            display: inline-block;
+            margin-top: 18px;
+        }
+
+        .department-detail .tag {
+            display: inline-block;
+            background: #edf4fb;
+            color: #123e70;
+            padding: 6px 12px;
+            margin: 5px 5px 0 0;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .department-detail:target {
+            outline: 2px solid #f4c542;
+        }
+
+        @media (max-width: 600px) {
+            .department-detail {
+                padding: 22px;
+                margin: 24px 0;
+            }
+
+            .department-detail h2 {
+                font-size: 23px;
+            }
+
+            .brand-logo {
+                width: 45px;
+                height: 45px;
+            }
+
+            .brand-text strong {
+                font-size: 16px;
+            }
+
+            .brand-text small {
+                font-size: 8px;
+                letter-spacing: 0.8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+
+            <a class="brand" href="index.html">
+                <img
+                    src="C:\Users\ARSHIYA\Downloads\WhatsApp Image 2026-10-05 at 6.58.30 PM.jpeg"
+                    alt="SGI Software Guild Logo"
+                    class="brand-logo"
+                >
+
+                <span class="brand-text">
+                    <strong>Software Guild</strong>
+                    <small>SITAMS · STUDENT COMMUNITY</small>
+                </span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a class="active" href="departments.html">Departments</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="nav-cta" href="team.html">Meet the team ↗</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PAGE BANNER -->
+        <section class="page-banner">
+            <div class="container">
+                <span class="breadcrumb">Home / Departments</span>
+
+                <h1>Every role moves us forward.</h1>
+
+                <p>
+                    Explore the teams and responsibilities that make
+                    SGI Software Guild work as one.
+                </p>
+            </div>
+        </section>
+
+        <!-- DEPARTMENT OVERVIEW -->
+        <section class="content">
+            <div class="container">
+
+                <h2 class="section-title">Explore Our Departments</h2>
+
+                <div class="grid">
+
+                    <!-- CEO -->
+                    <article class="card">
+                        <div class="card-icon">♔</div>
+                        <h3>CEO</h3>
+
+                        <p>
+                            Provides overall direction, sets priorities,
+                            and keeps the guild focused on its mission.
+                        </p>
+
+                        <a class="text-link" href="#leadership-details">
+                            Learn more →
+                        </a>
+                    </article>
+
+                    <!-- HR -->
+                    <article class="card">
+                        <div class="card-icon">♡</div>
+                        <h3>Human Resources</h3>
+
+                        <p>
+                            Supports member communication, coordination,
+                            inclusion, and a positive team culture.
+                        </p>
+
+                        <a class="text-link" href="#hr-details">
+                            Learn more →
+                        </a>
+                    </article>
+
+                    <!-- MANAGER -->
+                    <article class="card">
+                        <div class="card-icon">◷</div>
+                        <h3>Manager</h3>
+
+                        <p>
+                            Coordinates activities, tracks responsibilities,
+                            and helps teams complete their work.
+                        </p>
+
+                        <a class="text-link" href="#manager-details">
+                            Learn more →
+                        </a>
+                    </article>
+
+                    <!-- FRONTEND -->
+                    <article class="card">
+                        <div class="card-icon">〈/〉</div>
+                        <h3>Frontend Development</h3>
+
+                        <p>
+                            Creates responsive, accessible, and attractive
+                            interfaces for websites and digital products.
+                        </p>
+
+                        <a class="text-link" href="#frontend-details">
+                            11 members · Learn more →
+                        </a>
+                    </article>
+
+                    <!-- BACKEND -->
+                    <article class="card">
+                        <div class="card-icon">⌘</div>
+                        <h3>Backend Development</h3>
+
+                        <p>
+                            Develops application logic, APIs, and reliable
+                            services that power digital experiences.
+                        </p>
+
+                        <a class="text-link" href="#backend-details">
+                            16 members · Learn more →
+                        </a>
+                    </article>
+
+                    <!-- DATABASE -->
+                    <article class="card">
+                        <div class="card-icon">▤</div>
+                        <h3>Database &amp; Data Integrity</h3>
+
+                        <p>
+                            Maintains structured information, data accuracy,
+                            consistency, and reliable storage.
+                        </p>
+
+                        <a class="text-link" href="#database-details">
+                            6 members · Learn more →
+                        </a>
+                    </article>
+
+                </div>
+
+                <!-- CEO DETAILS -->
+                <section class="department-detail" id="leadership-details">
+
+                    <h2>♔ Chief Executive Officer</h2>
+
+                    <p>
+                        The CEO provides the overall vision and direction
+                        for SGI Software Guild. This role helps align
+                        departmental activities with the organization's goals.
+                    </p>
+
+                    <h3>Key Responsibilities</h3>
+
+                    <ul>
+                        <li>Set organizational goals and priorities.</li>
+                        <li>Coordinate with department leaders.</li>
+                        <li>Encourage teamwork and innovation.</li>
+                        <li>Review progress and support future planning.</li>
+                    </ul>
+
+                    <a class="text-link" href="team.html#leadership">
+                        Meet leadership →
+                    </a>
+
+                </section>
+
+                <!-- HR DETAILS -->
+                <section class="department-detail" id="hr-details">
+
+                    <h2>♡ Human Resources</h2>
+
+                    <p>
+                        HR supports the people who make the guild successful.
+                        The department encourages communication, participation,
+                        and a respectful team environment.
+                    </p>
+
+                    <h3>Key Responsibilities</h3>
+
+                    <ul>
+                        <li>Support communication among members.</li>
+                        <li>Help coordinate team activities.</li>
+                        <li>Encourage inclusion and collaboration.</li>
+                        <li>Help members understand their responsibilities.</li>
+                    </ul>
+
+                    <a class="text-link" href="team.html#leadership">
+                        Meet the team →
+                    </a>
+
+                </section>
+
+                <!-- MANAGER DETAILS -->
+                <section class="department-detail" id="manager-details">
+
+                    <h2>◷ Manager</h2>
+
+                    <p>
+                        The Manager helps organize work across departments
+                        and keeps activities moving according to agreed goals
+                        and timelines.
+                    </p>
+
+                    <h3>Key Responsibilities</h3>
+
+                    <ul>
+                        <li>Coordinate tasks and activities.</li>
+                        <li>Track project progress and responsibilities.</li>
+                        <li>Help resolve coordination issues.</li>
+                        <li>Share updates with team leaders.</li>
+                    </ul>
+
+                    <a class="text-link" href="team.html#leadership">
+                        Meet the team →
+                    </a>
+
+                </section>
+
+                <!-- FRONTEND DETAILS -->
+                <section class="department-detail" id="frontend-details">
+
+                    <h2>〈/〉 Frontend Development</h2>
+
+                    <p>
+                        The Frontend Development team builds the parts of
+                        websites that users see and interact with. The team
+                        focuses on clean design, usability, responsiveness,
+                        and accessibility.
+                    </p>
+
+                    <h3>Key Responsibilities</h3>
+
+                    <ul>
+                        <li>Create attractive website layouts.</li>
+                        <li>Build responsive pages for desktop and mobile.</li>
+                        <li>Use semantic HTML and organized CSS.</li>
+                        <li>Maintain consistent colors, typography, and spacing.</li>
+                        <li>Test pages across screen sizes and browsers.</li>
+                        <li>Collaborate with backend developers.</li>
+                    </ul>
+
+                    <h3>Core Technologies</h3>
+
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">Responsive Design</span>
+                    <span class="tag">UI/UX</span>
+                    <span class="tag">Accessibility</span>
+
+                    <p>
+                        <strong>Team size:</strong> 11 members
+                    </p>
+
+                    <a class="text-link" href="team.html#frontend">
+                        Meet the Frontend Team →
+                    </a>
+
+                </section>
+
+                <!-- BACKEND DETAILS -->
+                <section class="department-detail" id="backend-details">
+
+                    <h2>⌘ Backend Development</h2>
+
+                    <p>
+                        Backend Development focuses on the application logic
+                        and services that operate behind the user interface.
+                        It helps applications process information and perform
+                        tasks reliably.
+                    </p>
+
+                    <h3>Key Responsibilities</h3>
+
+                    <ul>
+                        <li>Develop server-side application features.</li>
+                        <li>Design and maintain APIs.</li>
+                        <li>Validate incoming data and handle errors.</li>
+                        <li>Support reliable application behaviour.</li>
+                        <li>Coordinate with frontend and database teams.</li>
+                        <li>Follow appropriate security practices.</li>
+                    </ul>
+
+                    <h3>Related Technologies</h3>
+
+                    <span class="tag">Server-side Development</span>
+                    <span class="tag">APIs</span>
+                    <span class="tag">Application Logic</span>
+                    <span class="tag">Testing</span>
+
+                    <p>
+                        <strong>Team size:</strong> 16 members
+                    </p>
+
+                    <a class="text-link" href="team.html#backend">
+                        Meet the Backend Team →
+                    </a>
+
+                </section>
+
+                <!-- DATABASE DETAILS -->
+                <section class="department-detail" id="database-details">
+
+                    <h2>▤ Database &amp; Data Integrity</h2>
+
+                    <p>
+                        This department helps organize, maintain, and protect
+                        information used by applications. It focuses on
+                        data accuracy, consistency, and reliable storage.
+                    </p>
+
+                    <h3>Key Responsibilities</h3>
+
+                    <ul>
+                        <li>Organize data into appropriate structures.</li>
+                        <li>Maintain data accuracy and consistency.</li>
+                        <li>Support database queries and data retrieval.</li>
+                        <li>Identify duplicate or invalid information.</li>
+                        <li>Support backup and recovery practices.</li>
+                        <li>Coordinate data requirements with backend developers.</li>
+                    </ul>
+
+                    <h3>Related Technologies</h3>
+
+                    <span class="tag">SQL</span>
+                    <span class="tag">Database Design</span>
+                    <span class="tag">Data Validation</span>
+                    <span class="tag">Data Integrity</span>
+
+                    <p>
+                        <strong>Team size:</strong> 6 members
+                    </p>
+
+                    <a class="text-link" href="team.html#database">
+                        Meet the Database Team →
+                    </a>
+
+                </section>
+
+                <div class="profile-note" style="margin-top: 28px;">
+                    Department descriptions explain typical responsibilities.
+                    Update them to match the actual roles and practices of
+                    your organization.
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- FOOTER BRAND WITH LOGO -->
+                <div>
+
+                    <a class="brand" href="index.html">
+                        <img
+                            src="C:\Users\ARSHIYA\Downloads\WhatsApp Image 2026-10-05 at 6.58.30 PM.jpeg"
+                            alt="SGI Software Guild Logo"
+                            class="brand-logo"
+                        >
+
+                        <span class="brand-text">
+                            <strong>Software Guild</strong>
+                            <small>SITAMS</small>
+                        </span>
+                    </a>
+
+                    <p style="margin-top: 18px; max-width: 360px;">
+                        A student-driven technology community where ideas
+                        become skills, collaboration becomes impact, and
+                        learners grow into creators.
+                    </p>
+
+                </div>
+
+                <!-- EXPLORE LINKS -->
+                <div>
+
+                    <h3>Explore</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="about.html">About the Guild</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="team.html">Meet our members</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- DEPARTMENT LINKS -->
+                <div>
+
+                    <h3>Our Departments</h3>
+
+                    <ul class="footer-links">
+                        <li><a href="#leadership-details">Leadership</a></li>
+                        <li><a href="#frontend-details">Frontend Development</a></li>
+                        <li><a href="#backend-details">Backend Development</a></li>
+                        <li><a href="#database-details">Database &amp; Data Integrity</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 SGI Software Guild · SITAMS</span>
+                <span>Learn together. Build together. Grow together.</span>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
+```

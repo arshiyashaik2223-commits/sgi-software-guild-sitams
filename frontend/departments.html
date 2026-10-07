@@ -7,130 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore the departments of SGI Software Guild at SITAMS.">
     <title>Departments | SGI Software Guild</title>
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Logo styling */
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .brand-logo {
-            width: 55px;
-            height: 55px;
-            object-fit: contain;
-            background: white;
-            border-radius: 8px;
-            padding: 3px;
-            flex-shrink: 0;
-        }
-
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .brand-text strong {
-            color: white;
-            font-size: 18px;
-        }
-
-        .brand-text small {
-            display: block;
-            color: #b8c8df;
-            font-size: 10px;
-            letter-spacing: 1.2px;
-        }
-
-        /* Department details */
-        .department-detail {
-            margin: 35px 0;
-            padding: 32px;
-            background: #ffffff;
-            border-left: 5px solid #f4c542;
-            border-radius: 14px;
-            box-shadow: 0 8px 25px rgba(7, 27, 58, 0.08);
-            scroll-margin-top: 25px;
-        }
-
-        .department-detail h2 {
-            color: #071b3a;
-            font-size: 28px;
-            margin-bottom: 14px;
-        }
-
-        .department-detail h3 {
-            color: #123e70;
-            margin-top: 22px;
-            margin-bottom: 8px;
-        }
-
-        .department-detail p,
-        .department-detail li {
-            color: #46546a;
-            line-height: 1.8;
-        }
-
-        .department-detail ul {
-            padding-left: 24px;
-        }
-
-        .department-detail li {
-            margin-bottom: 8px;
-        }
-
-        .department-detail .text-link {
-            display: inline-block;
-            margin-top: 18px;
-        }
-
-        .department-detail .tag {
-            display: inline-block;
-            background: #edf4fb;
-            color: #123e70;
-            padding: 6px 12px;
-            margin: 5px 5px 0 0;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-
-        .department-detail:target {
-            outline: 2px solid #f4c542;
-        }
-
-        @media (max-width: 600px) {
-            .department-detail {
-                padding: 22px;
-                margin: 24px 0;
-            }
-
-            .department-detail h2 {
-                font-size: 23px;
-            }
-
-            .brand-logo {
-                width: 45px;
-                height: 45px;
-            }
-
-            .brand-text strong {
-                font-size: 16px;
-            }
-
-            .brand-text small {
-                font-size: 8px;
-                letter-spacing: 0.8px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -246,7 +123,7 @@
                         </p>
 
                         <a class="text-link" href="#frontend-details">
-                            11 members · Learn more →
+                            <span id="card-size-frontend">...</span> members · Learn more →
                         </a>
                     </article>
 
@@ -261,7 +138,7 @@
                         </p>
 
                         <a class="text-link" href="#backend-details">
-                            16 members · Learn more →
+                            <span id="card-size-backend">...</span> members · Learn more →
                         </a>
                     </article>
 
@@ -276,7 +153,7 @@
                         </p>
 
                         <a class="text-link" href="#database-details">
-                            6 members · Learn more →
+                            <span id="card-size-database">...</span> members · Learn more →
                         </a>
                     </article>
 
@@ -392,7 +269,7 @@
                     <span class="tag">Accessibility</span>
 
                     <p>
-                        <strong>Team size:</strong> 11 members
+                        <strong>Team size:</strong> <span id="detail-size-frontend">...</span> members
                     </p>
 
                     <a class="text-link" href="team.html#frontend">
@@ -401,7 +278,44 @@
 
                 </section>
 
-                <!-- BACKEND DETAILS -->
+                <section class="department-detail" id="database-details">
+
+                    <h2>▤ Database &amp; Data Integrity</h2>
+
+                    <p>
+                        This department helps organize, maintain, and protect
+                        information used by applications. It focuses on
+                        data accuracy, consistency, and reliable storage.
+                    </p>
+
+                    <h3>Key Responsibilities</h3>
+
+                    <ul>
+                        <li>Organize data into appropriate structures.</li>
+                        <li>Maintain data accuracy and consistency.</li>
+                        <li>Support database queries and data retrieval.</li>
+                        <li>Identify duplicate or invalid information.</li>
+                        <li>Support backup and recovery practices.</li>
+                        <li>Coordinate data requirements with backend developers.</li>
+                    </ul>
+
+                    <h3>Related Technologies</h3>
+
+                    <span class="tag">SQL</span>
+                    <span class="tag">Database Design</span>
+                    <span class="tag">Data Validation</span>
+                    <span class="tag">Data Integrity</span>
+
+                    <p>
+                        <strong>Team size:</strong> <span id="detail-size-database">...</span> members
+                    </p>
+
+                    <a class="text-link" href="team.html#database">
+                        Meet the Database Team →
+                    </a>
+
+                </section>
+
                 <section class="department-detail" id="backend-details">
 
                     <h2>⌘ Backend Development</h2>
@@ -432,7 +346,7 @@
                     <span class="tag">Testing</span>
 
                     <p>
-                        <strong>Team size:</strong> 16 members
+                        <strong>Team size:</strong> <span id="detail-size-backend">...</span> members
                     </p>
 
                     <a class="text-link" href="team.html#backend">
@@ -441,45 +355,8 @@
 
                 </section>
 
+                <!-- BACKEND DETAILS -->
                 <!-- DATABASE DETAILS -->
-                <section class="department-detail" id="database-details">
-
-                    <h2>▤ Database &amp; Data Integrity</h2>
-
-                    <p>
-                        This department helps organize, maintain, and protect
-                        information used by applications. It focuses on
-                        data accuracy, consistency, and reliable storage.
-                    </p>
-
-                    <h3>Key Responsibilities</h3>
-
-                    <ul>
-                        <li>Organize data into appropriate structures.</li>
-                        <li>Maintain data accuracy and consistency.</li>
-                        <li>Support database queries and data retrieval.</li>
-                        <li>Identify duplicate or invalid information.</li>
-                        <li>Support backup and recovery practices.</li>
-                        <li>Coordinate data requirements with backend developers.</li>
-                    </ul>
-
-                    <h3>Related Technologies</h3>
-
-                    <span class="tag">SQL</span>
-                    <span class="tag">Database Design</span>
-                    <span class="tag">Data Validation</span>
-                    <span class="tag">Data Integrity</span>
-
-                    <p>
-                        <strong>Team size:</strong> 6 members
-                    </p>
-
-                    <a class="text-link" href="team.html#database">
-                        Meet the Database Team →
-                    </a>
-
-                </section>
-
                 <div class="profile-note" style="margin-top: 28px;">
                     Department descriptions explain typical responsibilities.
                     Update them to match the actual roles and practices of
@@ -559,6 +436,7 @@
         </div>
     </footer>
 
+    <script src="assets/js/api.js"></script>
 </body>
 </html>
 ```
